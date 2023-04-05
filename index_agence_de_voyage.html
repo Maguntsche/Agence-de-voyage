@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="titre"> Bienvenue sur notre site de Voyage !</p>
+    <p class="titre">Là où vos rêves deviennent réalité</p>
+
+    <div>
+        <img onclick="zoomimage('img1')" id="img1" src="https://images.pexels.com/photos/3769138/pexels-photo-3769138.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <button onclick="Lu('lu1','bouton1')" id="bouton1">Envoyer</button>
+        <p id="lu1"></p>
+    </div>
+    <div>
+        <img onclick="zoomimage('img2')" id="img2" src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <button onclick="Lu('lu2','bouton2')" id="bouton2">Envoyer</button>
+        <p id="lu2"></p>
+    </div>
+    <div>
+        <img onclick="zoomimage('img3')" id="img3" src="https://images.pexels.com/photos/1252500/pexels-photo-1252500.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <button onclick="Lu('lu3','bouton3')" id="bouton3">Envoyer</button>
+        <p id="lu3"></p>
+    </div>
+</body>
+</html>
+<style>
+    .titre {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .titre2 {
+        text-align: left;
+        margin-top: 50px;
+    }
+
+    div {
+        margin-top: 100px;
+        width:30%;
+        height:400px;
+        float: left;
+        background-color: rgb(165, 165, 165);
+        margin-left: 2.5%;
+        border-radius: 3%;
+    }
+
+    div p {
+        text-align: center;
+        margin-top: 10px;
+        width:20%;
+        margin-left: 40%;
+    }
+
+    div button {
+        width: 20%;
+        margin-top: 2%;
+        margin-left: 40%;
+    }
+
+    div img {
+        width: 100%;
+    }
+</style>
+<script>
+   function Lu(id,boutonid)
+   {
+    document.getElementById(id).innerHTML = "Lu"
+    changerColor(boutonid)
+   }
+
+   function changerColor(id)
+   {
+    document.getElementById(id).style.backgroundColor = "violet"
+   }
+
+   function zoomimage(id)
+   {
+    let doc = document.getElementById(id)
+    doc.style.width = "120%"
+    doc.style.marginLeft = "-10%"
+   }
+</script>
